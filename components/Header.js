@@ -42,10 +42,15 @@ function Header() {
             </div>
 
             <div className="flex items-center sm:space-x-2 justify-end">
-                <div className="flex rounded-full">
-                    <Image alt="fb" src='https://avatars.githubusercontent.com/u/75667121?s=400&u=2147ca1b438f9bff4717d0c9e058ba77e07f5a6a&v=4'
-                    />
-                </div>
+                <Image alt="fb"
+                    // onClick={signOut}
+                    // src={sessionStorage.user.iamge}
+                    src='https://avatars.githubusercontent.com/u/75667121?s=400&u=2147ca1b438f9bff4717d0c9e058ba77e07f5a6a&v=4'
+                    className="rounded-full cursor-pointer"
+                    width={40}
+                    height={40}
+                    layout='fixed'
+                />
                 <p className="whitespace-nowrap font-semibold pr-3">Abdul Basit Iqbal</p>
                 <ViewGridIcon className="icon" />
                 <ChatIcon className="icon" />

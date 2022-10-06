@@ -9,9 +9,11 @@ export default NextAuth({
     Providers({
       clientId: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+      // callbackURL: "http://localhost:3000"
     }),
     // ...add more providers here
   ],
+  secret: process.env.JWT_SECRET,
 });
 
 // export default NextAuth(authOptions)
