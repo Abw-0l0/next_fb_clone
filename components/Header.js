@@ -14,11 +14,14 @@ import { FlagIcon,
 } from '@heroicons/react/outline';
 
 import HeaderIcon from "./HeaderIcon";
+import { signOut, useSession } from "next-auth/react";
 
 
 function Header() {
+    // const [session] = useSession('');
+
     return(
-        <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
+        <header className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
             <div className="flex items-center">
                 <Image alt="fb" src='https://links.papareact.com/5me'
                     width={40}
@@ -51,13 +54,16 @@ function Header() {
                     height={40}
                     layout='fixed'
                 />
-                <p className="whitespace-nowrap font-semibold pr-3">Abdul Basit Iqbal</p>
+                <p className="whitespace-nowrap font-semibold pr-3 hidden">
+                    {/* {sessionStorage.user.name} */}
+                    Abdul Basit Iqbal
+                </p>
                 <ViewGridIcon className="icon" />
                 <ChatIcon className="icon" />
                 <BellIcon className="icon" />
                 <ChevronDownIcon className="icon" />
             </div>
-        </div>
+        </header>
     );
 }
 
