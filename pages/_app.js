@@ -1,13 +1,13 @@
 import '../styles/globals.css'
 // import { Provider } from "next-auth/client"
-import { SessionProvider } from "next-auth/react"
+// import { SessionProvider } from "next-auth/react"
 
 function MyApp({ Component,
-  pageProps: { session, ...pageProps }, }) {
+  pageProps: { ...pageProps }, }) {
   return (
-    <SessionProvider session={session}>
+    // <SessionProvider session={session}>
     <Component {...pageProps} />
-    </SessionProvider>
+    // </SessionProvider>
   );
 
 }
