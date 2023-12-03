@@ -7,6 +7,7 @@ import Login from '../components/Login'
 import Feed from '../components/Feed'
 import InputBox from '../components/InputBox'
 import Widgets from '../components/Widgets'
+import Image from 'next/image'
 
 export default function Home({ session }) {
   // console.log(session);
@@ -14,6 +15,7 @@ export default function Home({ session }) {
   return (
     <div>
       <Head>
+        <link className='w-4 h-4' rel="shortcut icon" href="//fb-icon.ico" />
         <title>fb-clone</title>
       </Head>
 
